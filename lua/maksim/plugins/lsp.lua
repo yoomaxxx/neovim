@@ -77,6 +77,7 @@ return {
           "cssmodules_ls",
           "emmet_language_server",
           "ruff",
+          "eslint",
         },
       })
 
