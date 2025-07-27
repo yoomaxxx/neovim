@@ -38,7 +38,6 @@ return {
       ensure_installed = {
         "stylua",
         "yamlfix",
-        "chrome-debug-adapter",
         "node-debug2-adapter",
       },
     },

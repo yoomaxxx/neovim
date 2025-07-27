@@ -12,14 +12,6 @@ return {
         },
       }
 
-      dap.adapters.chrome = {
-        type = "executable",
-        command = "node",
-        args = {
-          vim.fn.stdpath("data") .. "/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js",
-        },
-      }
-
       dap.configurations.javascript = {
         {
           name = "Launch",
@@ -38,23 +30,6 @@ return {
           processId = require("dap.utils").pick_process,
         },
       }
-
-      dap.configurations.javascriptreact = {}
-      dap.configurations.typescriptreact = {}
-
-      for _, value in ipairs({ "javascriptreact", "typescriptreact" }) do
-        table.insert(dap.configurations[value], {
-          type = "chrome",
-          name = "Attach to Chromium based browser",
-          request = "attach",
-          program = "${file}",
-          cwd = vim.fn.getcwd(),
-          sourceMaps = true,
-          protocol = "inspector",
-          port = 9222,
-          webRoot = "${workspaceFolder}",
-        })
-      end
     end,
   },
   {
