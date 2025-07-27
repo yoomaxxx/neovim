@@ -23,6 +23,7 @@ autocmd("BufWritePre", {
     "*.json",
     "*.jsonc",
     "*.toml",
+    "*.py",
   },
   callback = function()
     vim.lsp.buf.format({ async = false })

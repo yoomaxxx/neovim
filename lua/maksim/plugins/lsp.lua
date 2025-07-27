@@ -76,6 +76,7 @@ return {
           "css_variables",
           "cssmodules_ls",
           "emmet_language_server",
+          "ruff",
         },
       })
 
@@ -89,6 +90,12 @@ return {
               useLibraryCodeForTypes = true,
             },
           },
+        },
+      })
+
+      vim.lsp.config("ruff", {
+        init_options = {
+          settings = {},
         },
       })
 
