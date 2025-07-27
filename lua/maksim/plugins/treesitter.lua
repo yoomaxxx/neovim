@@ -41,6 +41,7 @@ return {
           "javascript",
           "typescript",
           "tsx",
+          "tmux",
         },
         indent = {
           enable = true,
