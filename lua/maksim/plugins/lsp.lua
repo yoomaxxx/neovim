@@ -78,6 +78,7 @@ return {
           "emmet_language_server",
           "ruff",
           "eslint",
+          "stylelint_lsp",
         },
       })
 
@@ -118,6 +119,14 @@ return {
             command = "LspEslintFixAll",
           })
         end,
+      })
+
+      vim.lsp.config("stylelint_lsp", {
+        settings = {
+          stylelintplus = {
+            autoFixOnSave = true,
+          },
+        },
       })
 
       vim.lsp.config("html", {
