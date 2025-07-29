@@ -41,6 +41,7 @@ return {
           "javascript",
           "typescript",
           "tsx",
+          "powershell",
         },
         indent = {
           enable = true,

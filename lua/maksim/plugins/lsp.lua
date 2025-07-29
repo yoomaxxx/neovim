@@ -79,8 +79,11 @@ return {
           "ruff",
           "eslint",
           "stylelint_lsp",
+          "powershell_es",
         },
       })
+
+      vim.lsp.enable("powershell_es")
 
       vim.lsp.config("pyright", {
         capabilities = capabilities,
