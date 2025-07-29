@@ -79,6 +79,7 @@ return {
           "ruff",
           "eslint",
           "stylelint_lsp",
+          "bashls",
         },
       })
 
@@ -175,6 +176,15 @@ return {
 
       vim.lsp.config("docker_compose_language_service", {
         capabilities = capabilities,
+      })
+
+      vim.lsp.config("bashls", {
+        capabilities = capabilities,
+        settings = {
+          bashIde = {
+            globPattern = "*@(.sh|.inc|.bash|.command)",
+          },
+        },
       })
 
       require("ufo").setup()
