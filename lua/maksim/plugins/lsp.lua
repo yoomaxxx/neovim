@@ -180,6 +180,7 @@ return {
 
       vim.lsp.config("bashls", {
         capabilities = capabilities,
+        filetypes = { "zsh", "sh", "bash" },
         settings = {
           bashIde = {
             globPattern = "*@(.sh|.inc|.bash|.command)",
