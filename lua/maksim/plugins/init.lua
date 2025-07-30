@@ -39,6 +39,8 @@ return {
         "stylua",
         "yamlfix",
         "node-debug2-adapter",
+        "bash-debug-adapter",
+        "shfmt",
       },
     },
   },
