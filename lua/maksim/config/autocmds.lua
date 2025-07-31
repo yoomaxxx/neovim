@@ -28,6 +28,7 @@ autocmd("BufWritePre", {
     "*.ts",
     "*.jsx",
     "*.js",
+    "*.ps1",
   },
   callback = function()
     vim.lsp.buf.format({ async = false })
