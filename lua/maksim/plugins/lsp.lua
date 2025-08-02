@@ -37,6 +37,7 @@ return {
       {
         "b0o/schemastore.nvim",
       },
+      { "folke/neoconf.nvim" },
     },
     config = function()
       require("mason-update-all").setup({
@@ -84,6 +85,7 @@ return {
       })
 
       vim.lsp.enable("powershell_es")
+      require("neoconf").setup({})
 
       vim.lsp.config("pyright", {
         capabilities = capabilities,
@@ -144,7 +146,7 @@ return {
 
       vim.lsp.enable("taplo")
 
-      vim.lsp.config("jsonls", {
+      require("lspconfig").jsonls.setup({
         capabilities = capabilities,
         settings = {
           json = {
@@ -157,7 +159,7 @@ return {
         },
       })
 
-      vim.lsp.config("yamlls", {
+      require("lspconfig").yamlls.setup({
         capabilities = capabilities,
         settings = {
           yaml = {
