@@ -11,12 +11,12 @@ vim.api.nvim_create_autocmd("User", {
 
 -- Format
 
-autocmd("BufWritePre", {
-  pattern = { "*.lua", "*.yaml", "*.js", "*.ts", "*.jsx", "*.tsx" },
-  callback = function(args)
-    require("conform").format({ bufnr = args.buf, quiet = true })
-  end,
-})
+-- autocmd("BufWritePre", {
+--  pattern = { "*.lua", "*.yaml", "*.js", "*.ts", "*.jsx", "*.tsx" },
+--  callback = function(args)
+--    require("conform").format({ bufnr = args.buf, quiet = true })
+--  end,
+--})
 
 autocmd("BufWritePre", {
   pattern = {
