@@ -144,7 +144,9 @@ return {
 
       vim.lsp.enable("cssmodules_ls")
 
-      vim.lsp.enable("taplo")
+      vim.lsp.config("taplo", {
+        root_markers = { "." },
+      })
 
       require("lspconfig").jsonls.setup({
         capabilities = capabilities,
