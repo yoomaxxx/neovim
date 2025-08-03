@@ -43,6 +43,8 @@ return {
           "tsx",
           "tmux",
           "bash",
+          "jinja",
+          "jinja_inline",
         },
         indent = {
           enable = true,

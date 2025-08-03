@@ -81,6 +81,7 @@ return {
           "eslint",
           "stylelint_lsp",
           "bashls",
+          "jinja_lsp",
         },
       })
 
@@ -97,6 +98,19 @@ return {
             },
           },
         },
+      })
+
+      vim.filetype.add({
+        extension = {
+          jinja = "jinja",
+          jinja2 = "jinja",
+          j2 = "jinja",
+        },
+      })
+
+      vim.lsp.config("jinja_lsp", {
+        capabilities = capabilities,
+        filetypes = { "jinja", "html" },
       })
 
       vim.lsp.enable("ruff")
