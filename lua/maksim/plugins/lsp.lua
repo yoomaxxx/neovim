@@ -111,7 +111,7 @@ return {
 
       vim.lsp.config("jinja_lsp", {
         capabilities = capabilities,
-        filetypes = { "jinja", "html" },
+        filetypes = { "jinja", "html", "python" },
       })
 
       vim.lsp.enable("ruff")
