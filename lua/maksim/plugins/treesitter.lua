@@ -42,6 +42,8 @@ return {
           "typescript",
           "tsx",
           "powershell",
+          "jinja",
+          "jinja_inline",
         },
         indent = {
           enable = true,
