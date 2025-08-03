@@ -8,7 +8,6 @@ return {
       local ft = require("guard.filetype")
 
       ft("lua"):fmt("stylua")
-      ft("sh"):fmt("shfmt")
       ft("yaml"):fmt("yamlfix")
       ft("typescript,javascript,typescriptreact,javascriptreact"):fmt("prettier")
 
