@@ -151,3 +151,13 @@ vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f_expr, { expr = t
 vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F_expr, { expr = true })
 vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t_expr, { expr = true })
 vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T_expr, { expr = true })
+
+-- code runner
+
+vim.keymap.set("n", "<space>rr", ":RunCode<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<space>rf", ":RunFile<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<space>rft", ":RunFile tab<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<space>rp", ":RunProject<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<space>rc", ":RunClose<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<space>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
+vim.keymap.set("n", "<space>crp", ":CRProjects<CR>", { noremap = true, silent = false })
