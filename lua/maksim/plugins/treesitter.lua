@@ -43,6 +43,7 @@ return {
           "tsx",
           "jinja",
           "jinja_inline",
+          "htmldjango",
         },
         indent = {
           enable = true,
