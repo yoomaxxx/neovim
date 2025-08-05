@@ -44,6 +44,7 @@ return {
           "powershell",
           "jinja",
           "jinja_inline",
+          "htmldjango",
         },
         indent = {
           enable = true,

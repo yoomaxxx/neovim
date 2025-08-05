@@ -2,21 +2,27 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- Mason
 
-vim.api.nvim_create_autocmd("User", {
+autocmd("User", {
   pattern = "MasonUpdateAllComplete",
   callback = function()
     print("mason-update-all has finished")
   end,
 })
 
--- Format
+-- Django
 
--- autocmd("BufWritePre", {
---  pattern = { "*.lua", "*.yaml", "*.js", "*.ts", "*.jsx", "*.tsx" },
---  callback = function(args)
---    require("conform").format({ bufnr = args.buf, quiet = true })
---  end,
---})
+autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.html",
+  callback = function(args)
+    local file_dir = vim.fn.fnamemodify(args.file, ":h")
+
+    local root = require("lspconfig.util").root_pattern("manage.py")(file_dir)
+
+    if root then
+      vim.bo.filetype = "htmldjango"
+    end
+  end,
+})
 
 autocmd("BufWritePre", {
   pattern = {
@@ -66,7 +72,7 @@ autocmd("LspAttach", {
 
 -- Comments
 
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
   pattern = "*",
   callback = function()
     vim.opt_local.formatoptions:remove({ "r", "o" })

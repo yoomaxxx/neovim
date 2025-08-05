@@ -82,6 +82,7 @@ return {
           "stylelint_lsp",
           "powershell_es",
           "jinja_lsp",
+          "htmx",
         },
       })
 
@@ -111,7 +112,13 @@ return {
 
       vim.lsp.config("jinja_lsp", {
         capabilities = capabilities,
-        filetypes = { "jinja", "html", "python" },
+        filetypes = { "jinja", "python" },
+      })
+
+      vim.lsp.enable("djlsp")
+
+      vim.lsp.config("htmx", {
+        capabilities = capabilities,
       })
 
       vim.lsp.enable("ruff")
