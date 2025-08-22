@@ -45,6 +45,8 @@ return {
           "jinja",
           "jinja_inline",
           "htmldjango",
+          "markdown",
+          "markdown_inline",
         },
         indent = {
           enable = true,

@@ -269,6 +269,9 @@ return {
           end, { "i", "s" }),
         }),
         sources = {
+          per_filetype = {
+            codecompanion = { "codecompanion" },
+          },
           {
             name = "lazydev",
             group_index = 0,
