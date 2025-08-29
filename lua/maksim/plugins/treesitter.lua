@@ -27,6 +27,9 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependecies = {
+      "OXY2DEV/markview.nvim",
+    },
     config = function()
       local configs = require("nvim-treesitter.configs")
       configs.setup({
