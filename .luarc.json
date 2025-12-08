@@ -1,5 +1,12 @@
 {
-  "diagnostics.disable": [
-    "missing-fields"
-  ]
+  "Lua": {
+    "diagnostics": {
+      "disable": [
+        "missing-fields"
+      ],
+      "globals": [
+        "vim"
+      ]
+    }
+  }
 }
