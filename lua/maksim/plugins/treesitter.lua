@@ -1,28 +1,10 @@
 return {
   {
-    "RRethy/nvim-treesitter-endwise",
-  },
-  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     dependecies = { "nvim-treesitter/nvim-treesitter" },
   },
   {
-    "nvim-treesitter/nvim-treesitter-context",
-    config = function()
-      require("treesitter-context").setup({
-        enable = true,
-        multiwindow = false,
-        max_lines = 0,
-        min_window_height = 0,
-        line_numbers = true,
-        multiline_threshold = 20,
-        trim_scope = "outer",
-        mode = "cursor",
-        separator = nil,
-        zindex = 20,
-        on_attach = nil,
-      })
-    end,
+    "RRethy/nvim-treesitter-textsubjects",
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -40,7 +22,15 @@ return {
           "python",
           "javascript",
           "typescript",
-          "tsx",
+          "tsx"
+        },
+        textsubjects = {
+          prev_selection = ',',
+          keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+            ['i;'] = 'textsubjects-container-inner',
+          },
         },
         indent = {
           enable = true,
@@ -98,16 +88,7 @@ return {
               ["[M"] = "@function.outer",
               ["[]"] = "@class.outer",
             },
-          },
-          lsp_interop = {
-            enable = true,
-            border = "none",
-            floating_preview_opts = {},
-            peek_definition_code = {
-              ["<space>df"] = "@function.outer",
-              ["<space>dF"] = "@class.outer",
-            },
-          },
+          }
         },
       })
     end,
