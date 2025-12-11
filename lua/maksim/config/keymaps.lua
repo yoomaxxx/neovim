@@ -1,9 +1,5 @@
 -- treesitter
 
-vim.keymap.set("n", "[c", function()
-  require("treesitter-context").go_to_context(vim.v.count1)
-end, { silent = true })
-
 local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
 
 vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move_next)
