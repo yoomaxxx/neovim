@@ -6,10 +6,6 @@ return {
     config = true,
   },
   {
-    "kevinhwang91/nvim-ufo",
-    dependencies = { "kevinhwang91/promise-async" },
-  },
-  {
     "gbprod/cutlass.nvim",
     event = "VeryLazy",
     opts = {
