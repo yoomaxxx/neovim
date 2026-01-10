@@ -1,5 +1,13 @@
 return {
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd([[colorscheme tokyonight]])
+    end,
+  },
+  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
@@ -17,6 +25,6 @@ return {
         delete = "_",
         change = "_",
       },
-    }
-  }
+    },
+  },
 }
