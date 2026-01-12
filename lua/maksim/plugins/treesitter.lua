@@ -13,9 +13,9 @@ return {
         "toml",
         "yaml",
         "python",
-        "javascript",
-        "typescript",
-        "tsx",
+        "bash",
+        "jinja",
+        "jinja_inline",
       }
       for _, parser in ipairs(parsers) do
         treesitter.install(parser)
