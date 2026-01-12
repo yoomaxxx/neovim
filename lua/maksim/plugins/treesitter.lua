@@ -41,23 +41,8 @@ return {
     init = function()
       vim.g.no_plugin_maps = true
     end,
-    config = function()
-      require("nvim-treesitter-textobjects").setup({
-        textobjects = {
-          move = {
-            enable = true,
-            set_jumps = true,
-            goto_previous_start = {
-              ["[m"] = "@function.outer",
-              ["[["] = "@class.outer",
-            },
-            goto_previous_end = {
-              ["[M"] = "@function.outer",
-              ["[]"] = "@class.outer",
-            },
-          },
-        },
-      })
-    end,
+    opts = {},
   },
+  { "RRethy/nvim-treesitter-endwise", cond = not vim.g.vscode },
+  { "nvim-treesitter/nvim-treesitter-context", cond = not vim.g.vscode },
 }
