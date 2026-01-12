@@ -3,10 +3,13 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
+    cond = not vim.g.vscode,
     config = function()
       vim.cmd([[colorscheme tokyonight]])
     end,
   },
+  { "tpope/vim-obsession", cond = not vim.g.vscode },
+  { "mbbill/undotree", cond = not vim.g.vscode },
   {
     "kylechui/nvim-surround",
     version = "*",
