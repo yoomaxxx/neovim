@@ -13,4 +13,16 @@ return {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
   },
+  opts = {
+    defaults = {
+      mappings = {
+        i = {
+          ["<C-d>"] = require("telescope.actions").delete_buffer,
+        },
+        n = {
+          ["<C-d>"] = require("telescope.actions").delete_buffer,
+        },
+      },
+    },
+  },
 }
