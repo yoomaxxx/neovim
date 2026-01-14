@@ -43,6 +43,4 @@ return {
     end,
     opts = {},
   },
-  { "RRethy/nvim-treesitter-endwise", cond = not vim.g.vscode },
-  { "nvim-treesitter/nvim-treesitter-context", cond = not vim.g.vscode },
 }

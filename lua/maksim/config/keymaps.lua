@@ -130,9 +130,3 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Undotree
 
 vim.keymap.set("n", "<leader><F5>", vim.cmd.UndotreeToggle)
-
--- Sniprun
-
-vim.api.nvim_set_keymap("v", "<leader>r", "<Plug>SnipRun", { silent = true })
-vim.api.nvim_set_keymap("n", "<leader>r", "<Plug>SnipRun", { silent = true })
-vim.api.nvim_set_keymap("n", "<leader>f", "<Plug>SnipRunOperator", { silent = true })

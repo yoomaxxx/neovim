@@ -8,7 +8,6 @@ return {
       vim.cmd([[colorscheme tokyonight]])
     end,
   },
-  { "tpope/vim-obsession", cond = not vim.g.vscode },
   { "mbbill/undotree", cond = not vim.g.vscode },
   {
     "kylechui/nvim-surround",
