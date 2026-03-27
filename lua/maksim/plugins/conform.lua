@@ -14,8 +14,8 @@ return {
         },
         formatters_by_ft = {
           lua = { "stylua" },
-          sh = { "shfmt" },
-          zsh = { "shfmt" },
+          sh = require("maksim.config.platform").linux({ "shfmt" }),
+          zsh = require("maksim.config.platform").linux({ "shfmt" }),
           toml = { lsp_format = "prefer" },
           yaml = { "yamlfix" },
           dockerfile = { lsp_format = "prefer" },

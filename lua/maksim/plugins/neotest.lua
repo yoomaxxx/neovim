@@ -6,7 +6,7 @@ return {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "rcasia/neotest-bash",
+      require("maksim.config.platform").linux("rcasia/neotest-bash"),
       "marilari88/neotest-vitest",
       "nvim-neotest/neotest-python",
     },
@@ -42,12 +42,17 @@ return {
       },
     },
     config = function()
+      local platform = require("maksim.config.platform")
+      local adapters = {
+        require("neotest-python"),
+        require("neotest-vitest"),
+      }
+      if not platform.is_windows then
+        table.insert(adapters, require("neotest-bash"))
+      end
+
       require("neotest").setup({
-        adapters = {
-          require("neotest-python"),
-          require("neotest-bash"),
-          require("neotest-vitest"),
-        },
+        adapters = adapters,
       })
     end,
   },

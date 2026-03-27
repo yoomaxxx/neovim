@@ -4,7 +4,7 @@ return {
     cond = not vim.g.vscode,
     config = function()
       require("lint").linters_by_ft = {
-        sh = { "shellcheck" },
+        sh = require("maksim.config.platform").linux({ "shellcheck" }),
         markdown = { "markdownlint" },
       }
     end,

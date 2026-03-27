@@ -21,7 +21,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "pyright",
-          "bashls",
+          require("maksim.config.platform").linux("bashls"),
           "ruff",
           "taplo",
           "jsonls",
@@ -168,10 +168,12 @@ return {
         },
       })
 
-      vim.lsp.config("bashls", {
-        filetypes = { "bash", "sh", "zsh" },
-        capabilities = capabilities,
-      })
+      if not require("maksim.config.platform").is_windows then
+        vim.lsp.config("bashls", {
+          filetypes = { "bash", "sh", "zsh" },
+          capabilities = capabilities,
+        })
+      end
 
       vim.lsp.enable("taplo")
 

@@ -64,10 +64,10 @@ return {
   },
   { "tpope/vim-repeat" },
   { "tpope/vim-obsession", cond = not vim.g.vscode },
-  { "tmux-plugins/vim-tmux", cond = not vim.g.vscode },
+  { "tmux-plugins/vim-tmux", cond = not vim.g.vscode and not require("maksim.config.platform").is_windows },
   {
     "christoomey/vim-tmux-navigator",
-    cond = not vim.g.vscode,
+    cond = not vim.g.vscode and not require("maksim.config.platform").is_windows,
     cmd = {
       "TmuxNavigateLeft",
       "TmuxNavigateDown",
