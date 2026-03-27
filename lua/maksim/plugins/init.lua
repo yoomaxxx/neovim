@@ -1,10 +1,10 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "folke/tokyonight.nvim",
     priority = 1000,
     cond = not vim.g.vscode,
     config = function()
-      vim.cmd([[colorscheme gruvbox]])
+      vim.cmd([[colorscheme tokyonight-storm]])
     end,
   },
   { "mbbill/undotree", cond = not vim.g.vscode },
@@ -84,4 +84,5 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+  { "ellisonleao/dotenv.nvim", cond = not vim.g.vscode },
 }
