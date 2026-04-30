@@ -64,6 +64,14 @@ return {
   },
   { "tpope/vim-repeat" },
   { "tpope/vim-obsession", cond = not vim.g.vscode },
+  {
+    "TheLeoP/powershell.nvim",
+    cond = not vim.g.vscode and require("maksim.config.platform").is_windows,
+    opts = {
+      shell = "pwsh",
+      bundle_path = vim.fn.stdpath("data") .. "/mason/packages/powershell-editor-services",
+    },
+  },
   { "tmux-plugins/vim-tmux", cond = not vim.g.vscode and not require("maksim.config.platform").is_windows },
   {
     "christoomey/vim-tmux-navigator",
