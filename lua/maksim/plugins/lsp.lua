@@ -22,6 +22,7 @@ return {
           "lua_ls",
           "pyright",
           require("maksim.config.platform").linux("bashls"),
+          require("maksim.config.platform").windows("powershell_es"),
           "ruff",
           "taplo",
           "jsonls",

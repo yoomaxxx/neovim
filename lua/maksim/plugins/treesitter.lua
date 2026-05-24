@@ -14,6 +14,7 @@ return {
         "toml",
         "yaml",
         require("maksim.config.platform").linux("bash"),
+        require("maksim.config.platform").windows("powershell"),
         "vim",
         "vimdoc",
         require("maksim.config.platform").linux("zsh"),
