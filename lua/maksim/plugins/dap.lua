@@ -81,7 +81,8 @@ return {
       if not require("maksim.config.platform").is_windows then
         dap.adapters.bashdb = {
           type = "executable",
-          command = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
+          command = vim.fn.stdpath("data")
+            .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
           name = "bashdb",
         }
 

@@ -21,6 +21,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "pyright",
+          "rust_analyzer",
           require("maksim.config.platform").linux("bashls"),
           require("maksim.config.platform").windows("powershell_es"),
           "ruff",
@@ -32,12 +33,6 @@ return {
           "marksman",
           "ts_ls",
           "svelte",
-          "vue_ls",
-          "html",
-          "cssls",
-          "css_variables",
-          "cssmodules_ls",
-          "tailwindcss",
         },
       })
 
@@ -182,99 +177,7 @@ return {
 
       vim.lsp.config("marksman", { capabilities = capabilities })
 
-      vim.lsp.config("ts_ls", {
-        init_options = {
-          plugins = {
-            {
-              name = "@vue/typescript-plugin",
-              location = vim.fn.stdpath("data")
-                .. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
-              languages = { "javascript", "typescript", "vue" },
-            },
-          },
-        },
-        filetypes = {
-          "javascript",
-          "typescript",
-          "vue",
-        },
-        capabilities = capabilities,
-      })
-
-      vim.lsp.enable("eslint")
-
-      vim.lsp.enable("vue_ls")
-
-      vim.lsp.config("html", {
-        capabilities = capabilities,
-        filetypes = { "htmldjango", "html" },
-        init_options = {
-          provideFormatter = false,
-          embeddedLanguages = { css = true, javascript = true },
-          configurationSection = { "html", "css", "javascript" },
-        },
-      })
-
-      vim.lsp.config("cssls", {
-        filetypes = { "css", "scss", "less" },
-        init_options = { provideFormatter = true },
-        settings = {
-          css = { validate = false },
-          scss = { validate = false },
-          less = { validate = false },
-        },
-      })
-
       vim.lsp.config("jinja_lsp", { capabilities = capabilities })
-
-      vim.lsp.config("djls", {
-        cmd = { "djls", "serve" },
-        filetypes = { "htmldjango", "html", "python" },
-        root_markers = { "manage.py", "pyproject.toml", ".git" },
-      })
-
-      vim.lsp.config("tailwindcss", {
-        settings = {
-          tailwindCSS = {
-            validate = true,
-            lint = {
-              cssConflict = "warning",
-              invalidApply = "error",
-              invalidScreen = "error",
-              invalidVariant = "error",
-              invalidConfigPath = "error",
-              invalidTailwindDirective = "error",
-              recommendedVariantOrder = "warning",
-            },
-            classAttributes = {
-              "class",
-              "className",
-              "class:list",
-              "classList",
-              "ngClass",
-            },
-            includeLanguages = {
-              eelixir = "html-eex",
-              elixir = "phoenix-heex",
-              eruby = "erb",
-              heex = "phoenix-heex",
-              htmlangular = "html",
-              templ = "html",
-            },
-          },
-        },
-      })
-
-      vim.lsp.config("stylelint_lsp", {
-        settings = {
-          stylelintplus = {
-            -- see available options in stylelint-lsp documentation
-          },
-        },
-      })
-
-      vim.lsp.enable("cssmodules_ls")
-      vim.lsp.enable("css_variables")
     end,
   },
 }

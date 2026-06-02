@@ -7,7 +7,6 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
       require("maksim.config.platform").linux("rcasia/neotest-bash"),
-      "marilari88/neotest-vitest",
       "nvim-neotest/neotest-python",
     },
     cond = not vim.g.vscode,
@@ -45,7 +44,7 @@ return {
       local platform = require("maksim.config.platform")
       local adapters = {
         require("neotest-python"),
-        require("neotest-vitest"),
+        require("rustaceanvim.neotest"),
       }
       if not platform.is_windows then
         table.insert(adapters, require("neotest-bash"))

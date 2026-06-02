@@ -72,7 +72,10 @@ return {
       bundle_path = vim.fn.stdpath("data") .. "/mason/packages/powershell-editor-services",
     },
   },
-  { "tmux-plugins/vim-tmux", cond = not vim.g.vscode and not require("maksim.config.platform").is_windows },
+  {
+    "tmux-plugins/vim-tmux",
+    cond = not vim.g.vscode and not require("maksim.config.platform").is_windows,
+  },
   {
     "christoomey/vim-tmux-navigator",
     cond = not vim.g.vscode and not require("maksim.config.platform").is_windows,
@@ -93,4 +96,9 @@ return {
     },
   },
   { "ellisonleao/dotenv.nvim", cond = not vim.g.vscode },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^9",
+    lazy = false,
+  },
 }
