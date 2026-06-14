@@ -31,6 +31,7 @@ return {
         "embedded_template",
         "htmldjango",
         "html",
+        "nu",
       }
 
       treesitter.install(parsers)

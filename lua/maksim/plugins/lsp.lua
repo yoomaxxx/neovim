@@ -120,6 +120,8 @@ return {
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      vim.lsp.enable("nushell")
+
       vim.lsp.config("pyright", {
         capabilities = capabilities,
         settings = {
