@@ -21,7 +21,7 @@ return {
       { silent = true },
     },
     { "ca", "<CMD>Lspsaga code_action<CR>", { silent = true } },
-    { "<leader>o", "<CMD>Lspsaga outline<CR>", { silent = true } },
+    { "<leader>lo", "<CMD>Lspsaga outline<CR>", { silent = true } },
     { "K", "<CMD>Lspsaga hover_doc<CR>", { silent = true } },
     { "<leader>cr", "<CMD>Lspsaga rename<CR>", { silent = true } },
     { "<leader>sl", "<CMD>Lspsaga show_line_diagnostics<CR>", { silent = true } },
