@@ -1,6 +1,12 @@
 return {
   { "mbbill/undotree", cond = not vim.g.vscode },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
